@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Sidebar}  from './components/sidebar';
-import {MessagesList}  from './components/messageslist';
-import {AddMessage} from './components/addmessage';
 import Header from './components/header';
 import {RegisterUser} from './components/registeruser';
 import Chat from './components/chat.js';
@@ -10,7 +7,7 @@ import { connect } from 'react-redux';
 
 function RenderContent(props) {
   const name = props.name;
-  if (name != ''){
+  if (name !== ''){
     return (
       <Chat />
     )

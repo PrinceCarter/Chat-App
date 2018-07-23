@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { addMessage } from '../actions';
 import { connect } from 'react-redux';
 import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
 
 class AddMessageComponent extends Component {
 
