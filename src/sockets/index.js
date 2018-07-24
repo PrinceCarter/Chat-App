@@ -7,7 +7,7 @@ const setUpSocket = (dispatch, username) => {
   const port = process.env.PORT || 8989;
   const url = window.location.host;
   // Establish connection between client and server
-  const socket = new WebSocket('ws://' + url + ':' + port);
+  const socket = new WebSocket('wss://' + url + ':' + port);
 
   // As soon as someone opens the app, send the ADD_USER
   // action to the server along with the username.
