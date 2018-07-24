@@ -4,9 +4,11 @@ import {addUser, messageReceived, populateList} from '../actions';
 // Setting up WebSocket on Client side
 const setUpSocket = (dispatch, username) => {
 
+  const port = process.env.PORT || 8989;
+  const url = window.location.host;
   // Establish connection between client and server
-  const socket = new WebSocket('ws://localhost:8989')
-
+  const socket = new WebSocket(url + port);
+  
   // As soon as someone opens the app, send the ADD_USER
   // action to the server along with the username.
   socket.onopen = () => {
